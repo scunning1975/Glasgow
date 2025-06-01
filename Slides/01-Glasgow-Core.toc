@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{Introduction}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Managing expectations}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Diff-in-Diff Popularity}{11}{0}{1}
+\beamer@subsectionintoc {1}{3}{Origins of diff-in-diff in public health}{17}{0}{1}
+\beamer@sectionintoc {2}{Diff-in-Diff Fundamentals}{24}{0}{2}
+\beamer@subsectionintoc {2}{1}{Average Treatment Effect on the Treated}{25}{0}{2}
+\beamer@subsectionintoc {2}{2}{Core Diff-in-Diff Assumptions}{32}{0}{2}
+\beamer@subsectionintoc {2}{3}{Clearly Defined Control Status}{44}{0}{2}
+\beamer@subsectionintoc {2}{4}{Data Requirements}{50}{0}{2}
+\beamer@sectionintoc {3}{Weighting and Target Parameters}{59}{0}{3}
+\beamer@sectionintoc {4}{Four Means or One Regression}{76}{0}{4}
