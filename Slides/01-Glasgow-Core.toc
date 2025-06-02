@@ -6,6 +6,6 @@
 \beamer@subsectionintoc {2}{1}{Average Treatment Effect on the Treated}{25}{0}{2}
 \beamer@subsectionintoc {2}{2}{Core Diff-in-Diff Assumptions}{32}{0}{2}
 \beamer@subsectionintoc {2}{3}{Clearly Defined Control Status}{44}{0}{2}
-\beamer@subsectionintoc {2}{4}{Data Requirements}{50}{0}{2}
-\beamer@sectionintoc {3}{Weighting and Target Parameters}{59}{0}{3}
-\beamer@sectionintoc {4}{Four Means or One Regression}{76}{0}{4}
+\beamer@subsectionintoc {2}{4}{Data Requirements}{54}{0}{2}
+\beamer@sectionintoc {3}{Weighting and Target Parameters}{63}{0}{3}
+\beamer@sectionintoc {4}{Four Means or One Regression}{80}{0}{4}

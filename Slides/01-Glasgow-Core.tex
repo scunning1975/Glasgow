@@ -169,6 +169,17 @@ Basics of difference-in-differences (Beginners but also my own personal take on 
 \end{frame}
 
 
+\begin{frame}{Diff-in-Diff in the Cross-Section by Field}
+
+	\begin{figure}
+	\caption{Garg and Fetzer (2025)}
+	\includegraphics[scale=0.25]{./lecture_includes/did_growth2}
+	\end{figure}
+
+\end{frame}
+
+
+
 \begin{frame}{Diff-in-Diff Over Time}
 
 	\begin{figure}
@@ -177,6 +188,16 @@ Basics of difference-in-differences (Beginners but also my own personal take on 
 	\end{figure}
 
 \end{frame}
+
+\begin{frame}{Diff-in-Diff Compared to Others Over Time}
+
+	\begin{figure}
+	\caption{Garg and Fetzer (2025)}
+	\includegraphics[scale=0.25]{./lecture_includes/did_growth1}
+	\end{figure}
+
+\end{frame}
+
 
 \begin{frame}{Diff-in-Diff by Field}
 
@@ -187,24 +208,8 @@ Basics of difference-in-differences (Beginners but also my own personal take on 
 
 \end{frame}
 
-\begin{frame}{Diff-in-Diff by Field}
-
-	\begin{figure}
-	\caption{Garg and Fetzer (2025)}
-	\includegraphics[scale=0.25]{./lecture_includes/did_growth2}
-	\end{figure}
-
-\end{frame}
 
 
-\begin{frame}{Diff-in-Diff Over Time}
-
-	\begin{figure}
-	\caption{Garg and Fetzer (2025)}
-	\includegraphics[scale=0.25]{./lecture_includes/did_growth1}
-	\end{figure}
-
-\end{frame}
 
 
 
@@ -411,11 +416,9 @@ It's the average causal effect but only for the people exposed to some intervent
 \begin{frame}{ATT vs ATE}
 
 \begin{itemize}
-\item Potential outcomes is weirdly intuitive and complicated at the same time
-\item Simple exercises tend to help bring some of that confusion to the surface
-\item Let's look at the "Potential Outcomes" tab at our Diff-in-Diff Worksheet
+\item Potential outcomes is subtle and easily people are overconfident about its interpretation (probably because counterfactuals are seemingly easy to understand)
+\item Let's look at the "Potential Outcomes" tab at our Diff-in-Diff Worksheet; fill out all the instructions 
 \item \url{https://docs.google.com/spreadsheets/d/1onabpc14JdrGo6NFv0zCWo-nuWDLLV2L1qNogDT9SBw/edit?usp=sharing}
-\item Follow instructions and fill all of it out
 \end{itemize}
 
 \end{frame}
@@ -447,11 +450,12 @@ It's the average causal effect but only for the people exposed to some intervent
 \item The building block of diff-in-diff calculations is ``four averages and three subtractions''
 \item Needs two groups, two time periods, which is four averages
 \item Often called the $2 \times 2$ for that reason (Goodman-Bacon 2021)
-\end{itemize}
 
 \begin{eqnarray*}
 \widehat{\delta} = \bigg ( E[Y_k|Post] - E[Y_k|Pre] \bigg ) - \bigg ( E[Y_U | Post ] - E[ Y_U | Pre] \bigg) \\
 \end{eqnarray*}$k$ are the people in the job training program, $U$ are the untreated people not in the program, $Post$ is after the trainees took the class, $Pre$ is the period just before they took the class, and $E[y]$ is mean earnings.
+\item See \url{https://docs.google.com/spreadsheets/d/1onabpc14JdrGo6NFv0zCWo-nuWDLLV2L1qNogDT9SBw/edit?usp=sharing}
+\end{itemize}
 
 \end{frame}
 
@@ -540,7 +544,7 @@ It's in \textcolor{red}{red} because parallel trends is untestable and criticall
 
 
 \begin{eqnarray*}
-\widehat{\delta} &=& \bigg ( E[Y_k|Post] - E[Y_k|Pre] \bigg ) - \bigg ( E[Y_U | Post ] - E[ Y_U | Pre] \bigg) \\
+\widehat{\delta} &=& \bigg ( E[Y^1_k|Post] - \textcolor{red}{E[Y^1_k|Pre]} \bigg ) - \bigg ( E[Y^0_U | Post ] - E[ Y^0_U | Pre] \bigg) \\
 \end{eqnarray*}What if the $k$ group had been treated at the baseline ``pre'' period in our 2x2?
 
 \bigskip
@@ -570,7 +574,7 @@ First row is the ATT in the post period; middle row is parallel trends; third ro
 Using already treated units as controls is bad practice and here's why:
 
 \begin{eqnarray*}
-\widehat{\delta} &=& \bigg ( E[Y_k|Post] - E[Y_k|Pre] \bigg ) - \bigg ( E[Y_U | Post ] - E[ Y_U | Pre] \bigg) \\
+\widehat{\delta} &=& \bigg ( E[Y^1_k|Post] - E[Y^0_k|Pre] \bigg ) - \bigg ( \textcolor{red}{E[Y^1_U | Post ]} - \textcolor{red}{E[ Y^1_U | Pre]} \bigg) \\
 \end{eqnarray*}What if the $U$ group had always been treated in both periods? Is parallel trends enough to identify the ATT?
 
 \bigskip
@@ -604,8 +608,7 @@ Again, first row is the target parameter, plus parallel trends term, \textcolor{
 Look again at the result when you have NA and no treated control group:
 
 \begin{eqnarray*}
-\widehat{\delta} &=& \underbrace{E[Y^1_k | Post] - \textcolor{red}{E[Y^0_k | Post]}}_{\mathclap{\text{ATT}}} \\
-&& + \bigg [  \underbrace{\textcolor{red}{E[Y^0_k | Post]} - E[\textcolor{blue}{Y^0_k} | Pre] \bigg ] - \bigg [ E[Y^0_U | Post] - E[\textcolor{blue}{Y_U^0} | Pre] }_{\mathclap{\text{Non-parallel trends bias in 2x2 case}}} \bigg ]
+\widehat{\delta} &=& \bigg ( E[Y^1_k|Post] - \textcolor{blue}{E[Y^0_k|Pre]} \bigg ) - \bigg ( E[Y^0_U | Post ] - \textcolor{blue}{E[ Y^0_U | Pre]} \bigg) \\
 \end{eqnarray*}
 
 What does the zero mean exactly?  At baseline, before $k$ was treated, it was in the $Y^0$ state of the world -- that wasn't "not treated", it was rather a different treatment status.  What was it?  Whatever it was, group $U$ had the same one
@@ -614,25 +617,63 @@ What does the zero mean exactly?  At baseline, before $k$ was treated, it was in
 
 \begin{frame}{Clearly Defined Control Status}
 
-\begin{itemize}
-\item Researcher wants to know the effect of \emph{recreational marijuana} on opiate addiction
-\item Write down the treatment effect $$\delta_i = Y^1_i - \textcolor{blue}{Y^0_i}$$
-\item I know what $Y^1$ is -- that's a person exposed recreational cannabis regime; but what is $\textcolor{blue}{Y^0_i}$?
+Make our substitutions
 
-\end{itemize}
+\begin{eqnarray*}
+\widehat{\delta} &=& \underbrace{E[Y^1_k | Post] - \textcolor{red}{E[Y^0_k | Post]}}_{\mathclap{\text{ATT}}} \\
+&& + \bigg [  \underbrace{\textcolor{red}{E[Y^0_k | Post]} - \textcolor{blue}{E[Y^0_k | Pre]} \bigg ] - \bigg [ E[Y^0_U | Post] - \textcolor{blue}{E[Y_U^0 | Pre]} }_{\mathclap{\text{Non-parallel trends bias in 2x2 case}}} \bigg ]
+\end{eqnarray*}
+
+
+\begin{enumerate}
+\item Notice that embedded in parallel trends is NA, untreated controls, and clearly defined control status. 
+\item Notice that your target parameter is based on the same $Y^0$ as the $Y^0$ at baseline \emph{and} a clearly defined control state
+\end{enumerate}
 
 \end{frame}
 
 \begin{frame}{Clearly Defined Control Status}
 
+\begin{eqnarray*}
+\widehat{\delta} &=& \underbrace{E[Y^1_k | Post] - \textcolor{red}{E[Y^0_k | Post]}}_{\mathclap{\text{ATT}}} \\
+&& + \bigg [  \underbrace{\textcolor{red}{E[Y^0_k | Post]} - \textcolor{blue}{E[Y^0_k | Pre]} \bigg ] - \bigg [ E[Y^0_U | Post] - \textcolor{blue}{E[Y_U^0 | Pre]} }_{\mathclap{\text{Non-parallel trends bias in 2x2 case}}} \bigg ]
+\end{eqnarray*}
+
 \begin{itemize}
-\item Texas prohibits all cannabis -- last week passed a bill even reversing a 2018 Farm Bill that had inadvertently legalized hemp-based THC
-\item But Oklahoma has medical marijuana, which is neither recreational marijuana nor is it prohibited cannabis use -- it's a \emph{third treatment regime}
-\item Look closely again though at the form of the $2 \times 2$ identification and assumptions
+\item Your control group is untreated $Y^0$ in both periods and so under parallel trends will be a valid \emph{imputation}
+\item But notice the role of $Y^0_U$ -- parallel trends, clearly defined control state, NA -- is complex
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Example: Clearly Defined Control Status}
+
+\begin{itemize}
+\item United States has prohibited cannabis use (e.g., Texas), medical marijuana (e.g., Oklahoma) and recreational cannabis (e.g., California)
+\item Researcher wants to know the effect of \emph{recreational marijuana} on opiate addiction, but relative to what?  $$\delta_i = Y^1_i - \textcolor{blue}{Y^0_i}$$
+\item Note: All states with legalized recreational cannabis started with medical marijuana.  Does that matter?
+
 \end{itemize}
 
+\end{frame}
+
+\begin{frame}{Different Target Parameters}
+
+\begin{enumerate}
+\item $ATT_1 = E[Y^1_k|Pre] - \textcolor{red}{E[Y^0_k|Post]}$ where $Y^0$ is "treated with medical marijuana"
+\item $ATT_2 = E[Y^1_k|Pre] - \textcolor{green}{E[Y^0_k|Post]}$ where $Y^0$ is "treated with prohibition"
+\end{enumerate}
+\bigskip
+Do you think these \emph{must} be the same thing?  Why/why not? 
+
+\bigskip
+
+What data do you need for $ATT_1$ vs $ATT_2$?
 
 \end{frame}
+
+
 
 \begin{frame}{Clearly Defined Control Status}
 
@@ -642,19 +683,26 @@ What does the zero mean exactly?  At baseline, before $k$ was treated, it was in
 \end{eqnarray*}
 
 \begin{itemize}
-\item Diff-in-diff has a limitation that not all the other designs suffer from -- the control group \emph{must} have the same control status as the treatment group at baseline
-\item No state in the US has ever gone from "prohibition" to "recreational" marijuana
-\item Which means the best you can do with diff-in-diff is identify the effect of recreational marijuana compared to medical marijuana since every US state transitioned in that order
+\item Diff-in-diff \emph{can} estimate the effect of recreational marijuana relative to prohibition so long as states transitioned from medical marijuana to recreational marijuana.  Why?
+\pause
+\item Because of clearly defined control status, NA and parallel trends which is imputing counterfactuals
+\pause
+\item Therefore diff-in-diff can only identify $ATT_1$ (i.e., recreational cannabis vs medical marijuana) but not $ATT_2$ (i.e., recreational cannabis vs prohibition) \emph{in the US}
 \end{itemize}
 
 \end{frame}
 
+
 \begin{frame}{Target Parameter}
 
 \begin{itemize}
-\item Diff-in-diff can \emph{only} in the United States identify the "relative to medical marijuana" because recreational cannabis states have medical marijuana at baseline -- so control groups must too (not prohibition states)
-\item $\delta_i=Y^1_i - Y^0_i$ might be the causal effect of recreational marijuana on opiate addiction when $Y^0_i$ is "prohibition" or it may be "medical marijuana"
-\item Either is fine -- but they are not the same $Y^0$, is my point, and therefore they are not the same parameter
+\item Matching and regression adjustment can technically estimate either $ATT_1$ or $ATT_2$ so long as its own assumptions hold (do you see why that is?)
+\item But diff-in-diff has a limitation that not all the other designs suffer from -- the control group \emph{must} have the same control status as the treatment group at baseline
+\item So you must decide ahead of time:
+	\begin{enumerate}
+	\item What is your target parameter and why?
+	\item Can you estimate it with diff-in-diff in your data?  How do you know?
+	\end{enumerate}
 \end{itemize}
 
 \end{frame}
@@ -680,7 +728,7 @@ What does the zero mean exactly?  At baseline, before $k$ was treated, it was in
 \item Diff-in-diff requires four means -- pre and post for two groups
 \item Traditionally, the "pre" is a baseline mean at year just prior to treatment, $t-1$ or $b$ depending on author
 	\begin{itemize}
-	\item Though sometimes you will see people present any interaction as diff-in-diff I will stick to time
+	\item Though sometimes you will see people present any interaction as diff-in-diff, we will focus only on time in our workshop
 	\item Just remember the interaction regression we presented is calculating four means and three subtractions
 	\item Interpreting parallel trends is a bit stranger otherwise
 	\end{itemize}
@@ -736,16 +784,17 @@ What does the zero mean exactly?  At baseline, before $k$ was treated, it was in
 
 
 \begin{frame}{Imbalanced ATE}
-  \centering
-  \includegraphics[height=0.85\textheight,keepaspectratio]{./lecture_includes/imbalanced.png}
+
+Let's work together on an example of the effect of imbalanced panels versus balancing imbalanced panels at \url{https://docs.google.com/spreadsheets/d/1onabpc14JdrGo6NFv0zCWo-nuWDLLV2L1qNogDT9SBw/edit?usp=sharing} ("Balancing")
+
 \end{frame}
 
 % Slide 3
 \begin{frame}{Missing at Random (MAR)}
   \begin{itemize}
-    \item \textbf{Wooldridge (2010):} MAR does not bias estimation under constant treatment effects.
-    \item If missingness is independent of $E[\Delta Y^0]$, then parallel trends will still hold in the large sample.
-    \item Wooldridge calls this \emph{Missing At Random (MAR)}
+    \item Wooldridge (201) notes that missing at random (MAR) does not bias estimates under large samples
+    \item This is because missingness is independent of $E[\Delta Y^0]$, therefore parallel trends will still hold in the large sample.
+    \item This is somewhat testable, too, because if MAR holds, then baseline covariates for the $M=1$ and $M=0$ groups should on average be the same 
     \item But maybe this is not plausible always so is there anything else we can do?
   \end{itemize}
 \end{frame}
@@ -766,8 +815,9 @@ What does the zero mean exactly?  At baseline, before $k$ was treated, it was in
 
 \begin{itemize}
     \item Note though -- this is a "missing based on observables" type of unconfoundedness assumption
-    \item I haven't worked this out yet, but you'll need I'm sure an additional overlap assumption or some functional form assumption
-    \item You might explore whether there is something here for you, as it was an idea I had but I haven't worked it out
+    \item You will need an overlap assumption or a functional form assumption for regression-based imputation
+    \item Should you assume it?  It is technically weaker than assuming MAR, and imputing missing yet real $Y$ seems far less problematic than imputing missing yet fictional $Y^0$
+    \item But are you sure you know the drivers of missingness in your data?
 
 \end{itemize}
 
