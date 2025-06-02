@@ -10,7 +10,7 @@ clear
 capture log close
 set seed 20200403
 
-* 1,000 firms (25 per state), 40 states, 4 groups (250 per groups), 30 years
+* 1,000 firms (25 per state), 40 states, 2 groups (250 per groups), 4 years
 * First create the states
 set obs 40
 gen state = _n
@@ -36,7 +36,7 @@ egen id =group(state firms)
 gen     group=0
 replace group=1 if id >= 500
 
-* Correct start date so that NA is satisfied
+* Correct start date so that NA is satisfied (1991 is treatment date, 1990 is untreated)
 gen     post=0  
 replace post=1 if year >= 1991
 

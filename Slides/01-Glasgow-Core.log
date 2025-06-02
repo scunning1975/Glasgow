@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.14)  2 JUN 2025 08:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.14)  2 JUN 2025 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1953,7 +1953,7 @@ Overfull \vbox (3.18866pt too high) detected at line 460
 File: ./lecture_includes/balanced.png Graphic file (type png)
 <use ./lecture_includes/balanced.png>
 Package pdftex.def Info: ./lecture_includes/balanced.png  used on input line 77
-4.
+9.
 (pdftex.def)             Requested size: 254.2151pt x 228.77626pt.
  [58
 
@@ -1976,7 +1976,7 @@ Package pdftex.def Info: ./lecture_includes/balanced.png  used on input line 77
 File: ./lecture_includes/step1_y1y0.png Graphic file (type png)
 <use ./lecture_includes/step1_y1y0.png>
 Package pdftex.def Info: ./lecture_includes/step1_y1y0.png  used on input line 
-879.
+884.
 (pdftex.def)             Requested size: 236.06837pt x 215.31812pt.
  [66
 
@@ -1985,7 +1985,7 @@ Package pdftex.def Info: ./lecture_includes/step1_y1y0.png  used on input line
 File: ./lecture_includes/step1_att.png Graphic file (type png)
 <use ./lecture_includes/step1_att.png>
 Package pdftex.def Info: ./lecture_includes/step1_att.png  used on input line 8
-89.
+94.
 (pdftex.def)             Requested size: 250.18431pt x 215.31812pt.
  [67
 
@@ -1993,17 +1993,17 @@ Package pdftex.def Info: ./lecture_includes/step1_att.png  used on input line 8
 
 ]
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/l/n' aliased to
-(Font)              `OT1/Roboto-LF/light/n' on input line 941.
+(Font)              `OT1/Roboto-LF/light/n' on input line 946.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/n' will be
-(Font)              scaled to size 9.0pt on input line 941.
+(Font)              scaled to size 9.0pt on input line 946.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
-(Font)              `OT1/Roboto-LF/bold/n' on input line 941.
+(Font)              `OT1/Roboto-LF/bold/n' on input line 946.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 9.0pt on input line 941.
+(Font)              scaled to size 9.0pt on input line 946.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
-(Font)              `OT1/Roboto-LF/bold/n' on input line 941.
+(Font)              `OT1/Roboto-LF/bold/n' on input line 946.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 6.0pt on input line 941.
+(Font)              scaled to size 6.0pt on input line 946.
 
 [69
 
@@ -2020,10 +2020,10 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
 File: ./lecture_includes/tiebout_roy1.png Graphic file (type png)
 <use ./lecture_includes/tiebout_roy1.png>
 Package pdftex.def Info: ./lecture_includes/tiebout_roy1.png  used on input lin
-e 1017.
+e 1022.
 (pdftex.def)             Requested size: 347.86612pt x 188.40181pt.
 
-Overfull \hbox (13.67076pt too wide) in paragraph at lines 1017--1017
+Overfull \hbox (13.67076pt too wide) in paragraph at lines 1022--1022
  [] 
  []
 
@@ -2036,10 +2036,10 @@ Overfull \hbox (13.67076pt too wide) in paragraph at lines 1017--1017
 File: ./lecture_includes/tiebout_roy2.png Graphic file (type png)
 <use ./lecture_includes/tiebout_roy2.png>
 Package pdftex.def Info: ./lecture_includes/tiebout_roy2.png  used on input lin
-e 1036.
+e 1041.
 (pdftex.def)             Requested size: 344.07747pt x 188.40181pt.
 
-Overfull \hbox (9.88211pt too wide) in paragraph at lines 1036--1036
+Overfull \hbox (9.88211pt too wide) in paragraph at lines 1041--1041
  [] 
  []
 
@@ -2065,7 +2065,7 @@ Overfull \hbox (9.88211pt too wide) in paragraph at lines 1036--1036
 File: ./lecture_includes/waldinger_dd_5.pdf Graphic file (type pdf)
 <use ./lecture_includes/waldinger_dd_5.pdf>
 Package pdftex.def Info: ./lecture_includes/waldinger_dd_5.pdf  used on input l
-ine 1141.
+ine 1146.
 (pdftex.def)             Requested size: 219.57741pt x 143.80128pt.
  [84
 
@@ -2073,7 +2073,7 @@ ine 1141.
 File: ./lecture_includes/waldinger_dd_5.pdf Graphic file (type pdf)
 <use ./lecture_includes/waldinger_dd_5.pdf>
 Package pdftex.def Info: ./lecture_includes/waldinger_dd_5.pdf  used on input l
-ine 1152.
+ine 1157.
 (pdftex.def)             Requested size: 219.57741pt x 143.80128pt.
  [85
 
@@ -2084,10 +2084,10 @@ ine 1152.
 File: ./lecture_includes/simple2x2.png Graphic file (type png)
 <use ./lecture_includes/simple2x2.png>
 Package pdftex.def Info: ./lecture_includes/simple2x2.png  used on input line 1
-178.
+183.
 (pdftex.def)             Requested size: 350.24567pt x 134.5733pt.
 
-Overfull \hbox (16.05031pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (16.05031pt too wide) in paragraph at lines 1183--1183
  [] 
  []
 
@@ -2100,10 +2100,10 @@ Overfull \hbox (16.05031pt too wide) in paragraph at lines 1178--1178
 File: ./lecture_includes/regression2x2.png Graphic file (type png)
 <use ./lecture_includes/regression2x2.png>
 Package pdftex.def Info: ./lecture_includes/regression2x2.png  used on input li
-ne 1201.
+ne 1206.
 (pdftex.def)             Requested size: 350.73877pt x 188.40181pt.
 
-Overfull \hbox (16.54341pt too wide) in paragraph at lines 1201--1201
+Overfull \hbox (16.54341pt too wide) in paragraph at lines 1206--1206
  [] 
  []
 
@@ -2123,12 +2123,7 @@ Overfull \hbox (16.54341pt too wide) in paragraph at lines 1201--1201
 \tf@snm=\write8
 \openout8 = `01-Glasgow-Core.snm'.
 
-
-
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (90 not 91).
-               Rerun to correct this.
-
-(./01-Glasgow-Core.aux)
+ (./01-Glasgow-Core.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2137,10 +2132,10 @@ Package rerunfilecheck Info: File `01-Glasgow-Core.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  43720 strings out of 476025
- 934383 string characters out of 5790017
+ 934385 string characters out of 5790017
  1870388 words of memory out of 5000000
- 62933 multiletter control sequences out of 15000+600000
- 552332 words of font info for 152 fonts, out of 8000000 for 9000
+ 62935 multiletter control sequences out of 15000+600000
+ 552281 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1012b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb
@@ -2158,7 +2153,7 @@ al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/t
 exlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb>
-Output written on 01-Glasgow-Core.pdf (91 pages, 11731465 bytes).
+Output written on 01-Glasgow-Core.pdf (91 pages, 11731374 bytes).
 PDF statistics:
  905 PDF objects out of 1000 (max. 8388607)
  709 compressed objects within 8 object streams
