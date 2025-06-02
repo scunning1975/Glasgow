@@ -48,19 +48,8 @@ coeftest(long_diff_model, vcov = vcovCL, cluster = ~sid)
 # Population weights
 
 # Example 1: Weighted OLS regression
-ols_weighted <- lm(l_homicide ~ post * treat, weights = popwt, data = castle_filtered)
-coeftest(ols_weighted, vcov = vcovCL, cluster = ~state)
 
 # Example 2: Two-way fixed effects with population weights
-fe_weighted <- feols(l_homicide ~ post:treat | sid + year, cluster = ~state, weights = ~popwt, data = castle_filtered)
-summary(fe_weighted)
 
 # Example 3: Weighted long difference regression
-castle_wide_weighted <- castle_filtered %>%
-  select(sid, year, l_homicide, treat, popwt) %>%
-  pivot_wider(names_from = year, values_from = c(l_homicide, popwt), names_prefix = c("homicide_", "popwt_")) %>%
-  mutate(diff = homicide_2006 - homicide_2005)
-
-long_diff_weighted_model <- lm(diff ~ treat, weights = popwt_2006, data = castle_wide_weighted)
-coeftest(long_diff_weighted_model, vcov = vcovCL, cluster = ~sid)
 
