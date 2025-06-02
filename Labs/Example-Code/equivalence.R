@@ -1,55 +1,66 @@
-################################################################################
-# name: equivalence.R
-# author: scott cunningham and chatgpt4 code generator
-# description: show that did equation is numerically equivalent to OLS specification
-################################################################################
+# equivalence.R
+# author: Scott Cunningham
+# description: OLS and Manual equivalence in R
 
-# Load necessary libraries
-# install.packages(c("tidyverse", "fixest", "haven"))
-library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(lmtest)
+library(sandwich)
 library(fixest)
-library(haven)
 
-# Load the data
-data <- haven::read_dta("https://github.com/scunning1975/mixtape/raw/master/castle.dta")
+# Load dataset
+castle <- haven::read_dta("https://github.com/scunning1975/mixtape/raw/master/castle.dta")
 
-# Filter the data
-data <- data %>%
-  filter(!(effyear %in% c(2005, 2007, 2008, 2009)))
+# Filter data
+castle_filtered <- castle %>%
+  filter(!(effyear %in% c(2005, 2007, 2008, 2009))) %>%
+  mutate(post = ifelse(year >= 2006, 1, 0),
+         treat = ifelse(effyear == 2006, 1, 0)) %>%
+  filter(year %in% c(2005, 2006))
 
-# Generate post and treat variables
-data <- data %>%
-  mutate(
-    year = as.numeric(year),
-    post = ifelse(year >= 2006, 1, 0),
-    treat = ifelse(!is.na(effyear), 1, 0)
-  )
+# Manual DID calculation
+y11 <- mean(castle_filtered$l_homicide[castle_filtered$post == 1 & castle_filtered$treat == 1], na.rm = TRUE)
+y10 <- mean(castle_filtered$l_homicide[castle_filtered$post == 0 & castle_filtered$treat == 1], na.rm = TRUE)
+y01 <- mean(castle_filtered$l_homicide[castle_filtered$post == 1 & castle_filtered$treat == 0], na.rm = TRUE)
+y00 <- mean(castle_filtered$l_homicide[castle_filtered$post == 0 & castle_filtered$treat == 0], na.rm = TRUE)
 
-# Calculate means for different groups
-(mean_values <- data %>%
-  group_by(post, treat) %>%
-  summarise(mean_l_homicide = mean(l_homicide, na.rm = TRUE)))
+DID <- (y11 - y10) - (y01 - y00)
+cat("Manual DID estimate:", DID, "\n")
 
-# Calculate the DiD manually
-(did <- with(mean_values, {
-  (mean_l_homicide[post == 1 & treat == 1] - mean_l_homicide[post == 0 & treat == 1]) - 
-  (mean_l_homicide[post == 1 & treat == 0] - mean_l_homicide[post == 0 & treat == 0])
-}))
+# Example 1: OLS regression with interaction
+ols_model <- lm(l_homicide ~ post * treat, data = castle_filtered)
+coeftest(ols_model, vcov = vcovCL, cluster = ~sid)
+
+# Example 2: Two-way fixed effects (state and year fixed effects)
+fe_model <- feols(l_homicide ~ post:treat | sid + year, cluster = ~sid, data = castle_filtered)
+summary(fe_model)
+
+# Example 3: Long difference regression
+castle_wide <- castle_filtered %>%
+  select(sid, year, l_homicide, treat) %>%
+  pivot_wider(names_from = year, values_from = l_homicide, names_prefix = "homicide_") %>%
+  mutate(diff = homicide_2006 - homicide_2005)
+
+long_diff_model <- lm(diff ~ treat, data = castle_wide)
+coeftest(long_diff_model, vcov = vcovCL, cluster = ~sid)
 
 
-# Run the regression with clustered standard errors
-model <- feols(
-  l_homicide ~ i(post) + i(treat) + post:treat, 
-  data = data, cluster = ~ state
-)
+# Population weights
 
-model
+# Example 1: Weighted OLS regression
+ols_weighted <- lm(l_homicide ~ post * treat, weights = popwt, data = castle_filtered)
+coeftest(ols_weighted, vcov = vcovCL, cluster = ~state)
 
-# Run the regression with population weights
-model_weighted <- feols(
-  l_homicide ~ i(post) + i(treat) + post:treat, 
-  data = data, cluster = ~ treat,
-  weights = ~ popwt
-)
+# Example 2: Two-way fixed effects with population weights
+fe_weighted <- feols(l_homicide ~ post:treat | sid + year, cluster = ~state, weights = ~popwt, data = castle_filtered)
+summary(fe_weighted)
 
-model_weighted
+# Example 3: Weighted long difference regression
+castle_wide_weighted <- castle_filtered %>%
+  select(sid, year, l_homicide, treat, popwt) %>%
+  pivot_wider(names_from = year, values_from = c(l_homicide, popwt), names_prefix = c("homicide_", "popwt_")) %>%
+  mutate(diff = homicide_2006 - homicide_2005)
+
+long_diff_weighted_model <- lm(diff ~ treat, weights = popwt_2006, data = castle_wide_weighted)
+coeftest(long_diff_weighted_model, vcov = vcovCL, cluster = ~sid)
+

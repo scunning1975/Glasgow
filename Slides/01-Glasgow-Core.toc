@@ -5,7 +5,8 @@
 \beamer@sectionintoc {2}{Diff-in-Diff Fundamentals}{24}{0}{2}
 \beamer@subsectionintoc {2}{1}{Average Treatment Effect on the Treated}{25}{0}{2}
 \beamer@subsectionintoc {2}{2}{Core Diff-in-Diff Assumptions}{32}{0}{2}
-\beamer@subsectionintoc {2}{3}{Clearly Defined Control Status}{44}{0}{2}
-\beamer@subsectionintoc {2}{4}{Data Requirements}{54}{0}{2}
-\beamer@sectionintoc {3}{Weighting and Target Parameters}{63}{0}{3}
-\beamer@sectionintoc {4}{Four Means or One Regression}{80}{0}{4}
+\beamer@sectionintoc {3}{Different Target Parameters}{44}{0}{3}
+\beamer@subsectionintoc {3}{1}{Clearly Defined Control Status}{45}{0}{3}
+\beamer@subsectionintoc {3}{2}{Imbalanced Panels}{55}{0}{3}
+\beamer@subsectionintoc {3}{3}{Population Weighting}{64}{0}{3}
+\beamer@sectionintoc {4}{Four Means or One Regression?}{80}{0}{4}

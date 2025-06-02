@@ -601,6 +601,8 @@ Again, first row is the target parameter, plus parallel trends term, \textcolor{
 
 \end{frame}
 
+\section{Different Target Parameters}
+
 \subsection{Clearly Defined Control Status}
 
 \begin{frame}{Clearly Defined Control Status}
@@ -719,7 +721,7 @@ What data do you need for $ATT_1$ vs $ATT_2$?
 
 \end{frame}
 
-\subsection{Data Requirements}
+\subsection{Imbalanced Panels}
 
 \begin{frame}{Longitudinal Data}
 
@@ -825,7 +827,7 @@ Let's work together on an example of the effect of imbalanced panels versus bala
 
 
 
-\section{Weighting and Target Parameters}
+\subsection{Population Weighting}
 
 
 
@@ -1070,12 +1072,12 @@ ATE_p &=& \frac{(0.5 \times 8) + (-1 \times 2)}{8 + 2} \\
 \begin{itemize}
 \item But the argument isn't to weight to make it nationally representative -- it's "is the average effect on the average county theoretically important, policy relevant and how one is planning to use it
 \item Others are also possible
-\item Quantile treatment effects (Athey and Imbens 2006; Callaway and Li 2019) and distribution regression target features of the marginal distributions of $Y^1_{i,t}$ and $Y^0_{i,t}$(Fernandez-Val, Meier, van Vuuren and Vella 2024a)
+\item Quantile treatment effects (Athey and Imbens 2006; Callaway and Li 2019) and distribution regression target features of the marginal distributions of $Y^1_{i,t}$ and $Y^0_{i,t}$ (Fernandez-Val, Meier, van Vuuren and Vella 2024a)
 \end{itemize}
 
 \end{frame}
 
-\section{Four Means or One Regression}
+\section{Four Means or One Regression?}
 
 
 
@@ -1197,6 +1199,13 @@ Notice how OLS is ``imputing'' $E[Y^0|D=1,Post]$ for the treatment group in the 
 \end{figure}
 
 \end{frame}
+
+\begin{frame}{Equivalence}
+
+Please open \texttt{equivalence.do} and \texttt{equivalence.R} in ./Example-Code
+
+\end{frame}
+
 
 \begin{frame}{Equivalence}
 

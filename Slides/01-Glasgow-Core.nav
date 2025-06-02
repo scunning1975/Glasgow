@@ -98,84 +98,86 @@
 \headcommand {\beamer@framepages {42}{42}}
 \headcommand {\slideentry {2}{2}{12}{43/43}{Core Diff-in-Diff Assumptions}{0}}
 \headcommand {\beamer@framepages {43}{43}}
+\headcommand {\beamer@sectionpages {24}{43}}
 \headcommand {\beamer@subsectionpages {32}{43}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{44}{Clearly Defined Control Status}}
-\headcommand {\slideentry {2}{3}{1}{44/44}{Clearly Defined Control Status}{0}}
+\headcommand {\sectionentry {3}{Different Target Parameters}{44}{Different Target Parameters}{0}}
+\headcommand {\slideentry {3}{0}{1}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {2}{3}{2}{45/45}{Clearly Defined Control Status}{0}}
+\headcommand {\beamer@subsectionpages {44}{44}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{45}{Clearly Defined Control Status}}
+\headcommand {\slideentry {3}{1}{1}{45/45}{Clearly Defined Control Status}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {2}{3}{3}{46/46}{Clearly Defined Control Status}{0}}
+\headcommand {\slideentry {3}{1}{2}{46/46}{Clearly Defined Control Status}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\slideentry {2}{3}{4}{47/47}{Clearly Defined Control Status}{0}}
+\headcommand {\slideentry {3}{1}{3}{47/47}{Clearly Defined Control Status}{0}}
 \headcommand {\beamer@framepages {47}{47}}
-\headcommand {\slideentry {2}{3}{5}{48/48}{Clearly Defined Control Status}{0}}
+\headcommand {\slideentry {3}{1}{4}{48/48}{Clearly Defined Control Status}{0}}
 \headcommand {\beamer@framepages {48}{48}}
-\headcommand {\slideentry {2}{3}{6}{49/51}{Clearly Defined Control Status}{0}}
-\headcommand {\beamer@framepages {49}{51}}
-\headcommand {\slideentry {2}{3}{7}{52/52}{Clearly Defined Control Status}{0}}
-\headcommand {\beamer@framepages {52}{52}}
-\headcommand {\slideentry {2}{3}{8}{53/53}{Clearly Defined Control Status}{0}}
+\headcommand {\slideentry {3}{1}{5}{49/49}{Clearly Defined Control Status}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {3}{1}{6}{50/52}{Clearly Defined Control Status}{0}}
+\headcommand {\beamer@framepages {50}{52}}
+\headcommand {\slideentry {3}{1}{7}{53/53}{Clearly Defined Control Status}{0}}
 \headcommand {\beamer@framepages {53}{53}}
-\headcommand {\beamer@subsectionpages {44}{53}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{54}{Data Requirements}}
-\headcommand {\slideentry {2}{4}{1}{54/54}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{1}{8}{54/54}{Clearly Defined Control Status}{0}}
 \headcommand {\beamer@framepages {54}{54}}
-\headcommand {\slideentry {2}{4}{2}{55/55}{Data Requirements}{0}}
+\headcommand {\beamer@subsectionpages {45}{54}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{55}{Imbalanced Panels}}
+\headcommand {\slideentry {3}{2}{1}{55/55}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {55}{55}}
-\headcommand {\slideentry {2}{4}{3}{56/56}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{2}{2}{56/56}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {56}{56}}
-\headcommand {\slideentry {2}{4}{4}{57/57}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{2}{3}{57/57}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {57}{57}}
-\headcommand {\slideentry {2}{4}{5}{58/58}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{2}{4}{58/58}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {58}{58}}
-\headcommand {\slideentry {2}{4}{6}{59/59}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{2}{5}{59/59}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {59}{59}}
-\headcommand {\slideentry {2}{4}{7}{60/60}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{2}{6}{60/60}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {2}{4}{8}{61/61}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{2}{7}{61/61}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {61}{61}}
-\headcommand {\slideentry {2}{4}{9}{62/62}{Data Requirements}{0}}
+\headcommand {\slideentry {3}{2}{8}{62/62}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {62}{62}}
-\headcommand {\beamer@sectionpages {24}{62}}
-\headcommand {\beamer@subsectionpages {54}{62}}
-\headcommand {\sectionentry {3}{Weighting and Target Parameters}{63}{Weighting and Target Parameters}{0}}
-\headcommand {\slideentry {3}{0}{1}{63/63}{}{0}}
+\headcommand {\slideentry {3}{2}{9}{63/63}{Imbalanced Panels}{0}}
 \headcommand {\beamer@framepages {63}{63}}
-\headcommand {\slideentry {3}{0}{2}{64/64}{}{0}}
+\headcommand {\beamer@subsectionpages {55}{63}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{64}{Population Weighting}}
+\headcommand {\slideentry {3}{3}{1}{64/64}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {64}{64}}
-\headcommand {\slideentry {3}{0}{3}{65/65}{}{0}}
+\headcommand {\slideentry {3}{3}{2}{65/65}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {65}{65}}
-\headcommand {\slideentry {3}{0}{4}{66/66}{}{0}}
+\headcommand {\slideentry {3}{3}{3}{66/66}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {66}{66}}
-\headcommand {\slideentry {3}{0}{5}{67/67}{}{0}}
+\headcommand {\slideentry {3}{3}{4}{67/67}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {67}{67}}
-\headcommand {\slideentry {3}{0}{6}{68/68}{}{0}}
+\headcommand {\slideentry {3}{3}{5}{68/68}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {68}{68}}
-\headcommand {\slideentry {3}{0}{7}{69/69}{}{0}}
+\headcommand {\slideentry {3}{3}{6}{69/69}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {69}{69}}
-\headcommand {\slideentry {3}{0}{8}{70/70}{}{0}}
+\headcommand {\slideentry {3}{3}{7}{70/70}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {70}{70}}
-\headcommand {\slideentry {3}{0}{9}{71/71}{}{0}}
+\headcommand {\slideentry {3}{3}{8}{71/71}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {71}{71}}
-\headcommand {\slideentry {3}{0}{10}{72/72}{}{0}}
+\headcommand {\slideentry {3}{3}{9}{72/72}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {72}{72}}
-\headcommand {\slideentry {3}{0}{11}{73/73}{}{0}}
+\headcommand {\slideentry {3}{3}{10}{73/73}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {73}{73}}
-\headcommand {\slideentry {3}{0}{12}{74/74}{}{0}}
+\headcommand {\slideentry {3}{3}{11}{74/74}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {74}{74}}
-\headcommand {\slideentry {3}{0}{13}{75/75}{}{0}}
+\headcommand {\slideentry {3}{3}{12}{75/75}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {75}{75}}
-\headcommand {\slideentry {3}{0}{14}{76/76}{}{0}}
+\headcommand {\slideentry {3}{3}{13}{76/76}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {76}{76}}
-\headcommand {\slideentry {3}{0}{15}{77/77}{}{0}}
+\headcommand {\slideentry {3}{3}{14}{77/77}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {77}{77}}
-\headcommand {\slideentry {3}{0}{16}{78/78}{}{0}}
+\headcommand {\slideentry {3}{3}{15}{78/78}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {78}{78}}
-\headcommand {\slideentry {3}{0}{17}{79/79}{}{0}}
+\headcommand {\slideentry {3}{3}{16}{79/79}{Population Weighting}{0}}
 \headcommand {\beamer@framepages {79}{79}}
-\headcommand {\beamer@sectionpages {63}{79}}
-\headcommand {\beamer@subsectionpages {63}{79}}
-\headcommand {\sectionentry {4}{Four Means or One Regression}{80}{Four Means or One Regression}{0}}
+\headcommand {\beamer@sectionpages {44}{79}}
+\headcommand {\beamer@subsectionpages {64}{79}}
+\headcommand {\sectionentry {4}{Four Means or One Regression?}{80}{Four Means or One Regression?}{0}}
 \headcommand {\slideentry {4}{0}{1}{80/80}{}{0}}
 \headcommand {\beamer@framepages {80}{80}}
 \headcommand {\slideentry {4}{0}{2}{81/81}{}{0}}
@@ -198,8 +200,10 @@
 \headcommand {\beamer@framepages {89}{89}}
 \headcommand {\slideentry {4}{0}{11}{90/90}{}{0}}
 \headcommand {\beamer@framepages {90}{90}}
-\headcommand {\beamer@partpages {1}{90}}
-\headcommand {\beamer@subsectionpages {80}{90}}
-\headcommand {\beamer@sectionpages {80}{90}}
-\headcommand {\beamer@documentpages {90}}
-\headcommand {\gdef \inserttotalframenumber {87}}
+\headcommand {\slideentry {4}{0}{12}{91/91}{}{0}}
+\headcommand {\beamer@framepages {91}{91}}
+\headcommand {\beamer@partpages {1}{91}}
+\headcommand {\beamer@subsectionpages {80}{91}}
+\headcommand {\beamer@sectionpages {80}{91}}
+\headcommand {\beamer@documentpages {91}}
+\headcommand {\gdef \inserttotalframenumber {88}}

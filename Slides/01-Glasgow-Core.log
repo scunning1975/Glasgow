@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.14)  2 JUN 2025 08:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.14)  2 JUN 2025 08:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1706,7 +1706,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
 (Font)              `OT1/Roboto-LF/bold/n' on input line 39.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
 (Font)              scaled to size 24.88pt on input line 39.
-<./lecture_includes/banner_cropped.png, id=93, 1541.76pt x 743.77875pt>
+<./lecture_includes/banner_cropped.png, id=97, 1541.76pt x 743.77875pt>
 File: ./lecture_includes/banner_cropped.png Graphic file (type png)
 <use ./lecture_includes/banner_cropped.png>
 Package pdftex.def Info: ./lecture_includes/banner_cropped.png  used on input l
@@ -1763,7 +1763,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
 ] [10
 
 ]
-<./lecture_includes/causal_claims.png, id=179, 551.05875pt x 582.67688pt>
+<./lecture_includes/causal_claims.png, id=186, 551.05875pt x 582.67688pt>
 File: ./lecture_includes/causal_claims.png Graphic file (type png)
 <use ./lecture_includes/causal_claims.png>
 Package pdftex.def Info: ./lecture_includes/causal_claims.png  used on input li
@@ -1780,7 +1780,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/l/it' aliased to
 (Font)              `OT1/Roboto-LF/light/it' on input line 179.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/it' will be
 (Font)              scaled to size 10.0pt on input line 179.
-<./lecture_includes/did_growth2.png, id=188, 1064.47687pt x 791.45688pt>
+<./lecture_includes/did_growth2.png, id=194, 1064.47687pt x 791.45688pt>
 File: ./lecture_includes/did_growth2.png Graphic file (type png)
 <use ./lecture_includes/did_growth2.png>
 Package pdftex.def Info: ./lecture_includes/did_growth2.png  used on input line
@@ -1789,7 +1789,7 @@ Package pdftex.def Info: ./lecture_includes/did_growth2.png  used on input line
  [12
 
  <./lecture_includes/did_growth2.png>]
-<./lecture_includes/currie_did.png, id=197, 963.6pt x 612.2875pt>
+<./lecture_includes/currie_did.png, id=203, 963.6pt x 612.2875pt>
 File: ./lecture_includes/currie_did.png Graphic file (type png)
 <use ./lecture_includes/currie_did.png>
 Package pdftex.def Info: ./lecture_includes/currie_did.png  used on input line 
@@ -1798,7 +1798,7 @@ Package pdftex.def Info: ./lecture_includes/currie_did.png  used on input line
  [13
 
  <./lecture_includes/currie_did.png>]
-<./lecture_includes/did_growth1.png, id=206, 1008.26688pt x 656.95438pt>
+<./lecture_includes/did_growth1.png, id=212, 1008.26688pt x 656.95438pt>
 File: ./lecture_includes/did_growth1.png Graphic file (type png)
 <use ./lecture_includes/did_growth1.png>
 Package pdftex.def Info: ./lecture_includes/did_growth1.png  used on input line
@@ -1807,7 +1807,7 @@ Package pdftex.def Info: ./lecture_includes/did_growth1.png  used on input line
  [14
 
  <./lecture_includes/did_growth1.png>]
-<./lecture_includes/paul_did.png, id=214, 320.69812pt x 187.70125pt>
+<./lecture_includes/paul_did.png, id=220, 320.69812pt x 187.70125pt>
 File: ./lecture_includes/paul_did.png Graphic file (type png)
 <use ./lecture_includes/paul_did.png>
 Package pdftex.def Info: ./lecture_includes/paul_did.png  used on input line 20
@@ -1827,7 +1827,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/it' will be
  [18
 
 ]
-<./lecture_includes/semmelweis_graphic.png, id=239, 859.65166pt x 426.393pt>
+<./lecture_includes/semmelweis_graphic.png, id=245, 859.65166pt x 426.393pt>
 File: ./lecture_includes/semmelweis_graphic.png Graphic file (type png)
 <use ./lecture_includes/semmelweis_graphic.png>
 Package pdftex.def Info: ./lecture_includes/semmelweis_graphic.png  used on inp
@@ -1845,7 +1845,7 @@ Overfull \hbox (9.65921pt too wide) in paragraph at lines 257--257
 ] [21
 
 ]
-<./lecture_includes/lambeth.png, id=260, 1220.05812pt x 968.61874pt>
+<./lecture_includes/lambeth.png, id=266, 1220.05812pt x 968.61874pt>
 File: ./lecture_includes/lambeth.png Graphic file (type png)
 <use ./lecture_includes/lambeth.png>
 Package pdftex.def Info: ./lecture_includes/lambeth.png  used on input line 297
@@ -1919,7 +1919,8 @@ Overfull \vbox (3.18866pt too high) detected at line 460
 
 ] [43
 
-] [44
+] (./01-Glasgow-Core.toc)
+[44
 
 ] [45
 
@@ -1927,8 +1928,7 @@ Overfull \vbox (3.18866pt too high) detected at line 460
 
 ] [47
 
-]
-[48
+] [48
 
 ] [49
 
@@ -1946,18 +1946,18 @@ Overfull \vbox (3.18866pt too high) detected at line 460
 
 ] [56
 
+] [57
+
 ]
-<./lecture_includes/balanced.png, id=501, 581.67313pt x 523.45563pt>
+<./lecture_includes/balanced.png, id=525, 581.67313pt x 523.45563pt>
 File: ./lecture_includes/balanced.png Graphic file (type png)
 <use ./lecture_includes/balanced.png>
 Package pdftex.def Info: ./lecture_includes/balanced.png  used on input line 77
-2.
+4.
 (pdftex.def)             Requested size: 254.2151pt x 228.77626pt.
- [57
+ [58
 
- <./lecture_includes/balanced.png>] [58
-
-] [59
+ <./lecture_includes/balanced.png>] [59
 
 ] [60
 
@@ -1965,27 +1965,27 @@ Package pdftex.def Info: ./lecture_includes/balanced.png  used on input line 77
 
 ] [62
 
-] (./01-Glasgow-Core.toc) [63
+] [63
 
 ] [64
 
 ] [65
 
 ]
-<./lecture_includes/step1_y1y0.png, id=573, 1461.46pt x 1332.98pt>
+<./lecture_includes/step1_y1y0.png, id=580, 1461.46pt x 1332.98pt>
 File: ./lecture_includes/step1_y1y0.png Graphic file (type png)
 <use ./lecture_includes/step1_y1y0.png>
 Package pdftex.def Info: ./lecture_includes/step1_y1y0.png  used on input line 
-877.
+879.
 (pdftex.def)             Requested size: 236.06837pt x 215.31812pt.
  [66
 
  <./lecture_includes/step1_y1y0.png>]
-<./lecture_includes/step1_att.png, id=580, 1461.46pt x 1257.69875pt>
+<./lecture_includes/step1_att.png, id=587, 1461.46pt x 1257.69875pt>
 File: ./lecture_includes/step1_att.png Graphic file (type png)
 <use ./lecture_includes/step1_att.png>
 Package pdftex.def Info: ./lecture_includes/step1_att.png  used on input line 8
-87.
+89.
 (pdftex.def)             Requested size: 250.18431pt x 215.31812pt.
  [67
 
@@ -1993,17 +1993,17 @@ Package pdftex.def Info: ./lecture_includes/step1_att.png  used on input line 8
 
 ]
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/l/n' aliased to
-(Font)              `OT1/Roboto-LF/light/n' on input line 939.
+(Font)              `OT1/Roboto-LF/light/n' on input line 941.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/n' will be
-(Font)              scaled to size 9.0pt on input line 939.
+(Font)              scaled to size 9.0pt on input line 941.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
-(Font)              `OT1/Roboto-LF/bold/n' on input line 939.
+(Font)              `OT1/Roboto-LF/bold/n' on input line 941.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 9.0pt on input line 939.
+(Font)              scaled to size 9.0pt on input line 941.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
-(Font)              `OT1/Roboto-LF/bold/n' on input line 939.
+(Font)              `OT1/Roboto-LF/bold/n' on input line 941.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 6.0pt on input line 939.
+(Font)              scaled to size 6.0pt on input line 941.
 
 [69
 
@@ -2016,14 +2016,14 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
 ] [73
 
 ]
-<./lecture_includes/tiebout_roy1.png, id=626, 729.927pt x 395.3169pt>
+<./lecture_includes/tiebout_roy1.png, id=633, 729.927pt x 395.3169pt>
 File: ./lecture_includes/tiebout_roy1.png Graphic file (type png)
 <use ./lecture_includes/tiebout_roy1.png>
 Package pdftex.def Info: ./lecture_includes/tiebout_roy1.png  used on input lin
-e 1015.
+e 1017.
 (pdftex.def)             Requested size: 347.86612pt x 188.40181pt.
 
-Overfull \hbox (13.67076pt too wide) in paragraph at lines 1015--1015
+Overfull \hbox (13.67076pt too wide) in paragraph at lines 1017--1017
  [] 
  []
 
@@ -2032,14 +2032,14 @@ Overfull \hbox (13.67076pt too wide) in paragraph at lines 1015--1015
  <./lecture_includes/tiebout_roy1.png>] [75
 
 ]
-<./lecture_includes/tiebout_roy2.png, id=640, 721.9773pt x 395.3169pt>
+<./lecture_includes/tiebout_roy2.png, id=647, 721.9773pt x 395.3169pt>
 File: ./lecture_includes/tiebout_roy2.png Graphic file (type png)
 <use ./lecture_includes/tiebout_roy2.png>
 Package pdftex.def Info: ./lecture_includes/tiebout_roy2.png  used on input lin
-e 1034.
+e 1036.
 (pdftex.def)             Requested size: 344.07747pt x 188.40181pt.
 
-Overfull \hbox (9.88211pt too wide) in paragraph at lines 1034--1034
+Overfull \hbox (9.88211pt too wide) in paragraph at lines 1036--1036
  [] 
  []
 
@@ -2061,11 +2061,11 @@ Overfull \hbox (9.88211pt too wide) in paragraph at lines 1034--1034
 ] [83
 
 ]
-<./lecture_includes/waldinger_dd_5.pdf, id=702, 243.97717pt x 159.78072pt>
+<./lecture_includes/waldinger_dd_5.pdf, id=710, 243.97717pt x 159.78072pt>
 File: ./lecture_includes/waldinger_dd_5.pdf Graphic file (type pdf)
 <use ./lecture_includes/waldinger_dd_5.pdf>
 Package pdftex.def Info: ./lecture_includes/waldinger_dd_5.pdf  used on input l
-ine 1139.
+ine 1141.
 (pdftex.def)             Requested size: 219.57741pt x 143.80128pt.
  [84
 
@@ -2073,21 +2073,21 @@ ine 1139.
 File: ./lecture_includes/waldinger_dd_5.pdf Graphic file (type pdf)
 <use ./lecture_includes/waldinger_dd_5.pdf>
 Package pdftex.def Info: ./lecture_includes/waldinger_dd_5.pdf  used on input l
-ine 1150.
+ine 1152.
 (pdftex.def)             Requested size: 219.57741pt x 143.80128pt.
  [85
 
 ] [86
 
 ]
-<./lecture_includes/simple2x2.png, id=754, 960.08687pt x 368.87813pt>
+<./lecture_includes/simple2x2.png, id=762, 960.08687pt x 368.87813pt>
 File: ./lecture_includes/simple2x2.png Graphic file (type png)
 <use ./lecture_includes/simple2x2.png>
 Package pdftex.def Info: ./lecture_includes/simple2x2.png  used on input line 1
-176.
+178.
 (pdftex.def)             Requested size: 350.24567pt x 134.5733pt.
 
-Overfull \hbox (16.05031pt too wide) in paragraph at lines 1176--1176
+Overfull \hbox (16.05031pt too wide) in paragraph at lines 1178--1178
  [] 
  []
 
@@ -2096,20 +2096,22 @@ Overfull \hbox (16.05031pt too wide) in paragraph at lines 1176--1176
  <./lecture_includes/simple2x2.png>] [88
 
 ]
-<./lecture_includes/regression2x2.png, id=768, 924.95563pt x 496.85625pt>
+<./lecture_includes/regression2x2.png, id=776, 924.95563pt x 496.85625pt>
 File: ./lecture_includes/regression2x2.png Graphic file (type png)
 <use ./lecture_includes/regression2x2.png>
 Package pdftex.def Info: ./lecture_includes/regression2x2.png  used on input li
-ne 1199.
+ne 1201.
 (pdftex.def)             Requested size: 350.73877pt x 188.40181pt.
 
-Overfull \hbox (16.54341pt too wide) in paragraph at lines 1199--1199
+Overfull \hbox (16.54341pt too wide) in paragraph at lines 1201--1201
  [] 
  []
 
 [89
 
  <./lecture_includes/regression2x2.png>] [90
+
+] [91
 
 ]
 \tf@nav=\write6
@@ -2121,18 +2123,23 @@ Overfull \hbox (16.54341pt too wide) in paragraph at lines 1199--1199
 \tf@snm=\write8
 \openout8 = `01-Glasgow-Core.snm'.
 
- (./01-Glasgow-Core.aux)
+
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (90 not 91).
+               Rerun to correct this.
+
+(./01-Glasgow-Core.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `01-Glasgow-Core.out' has not changed.
-(rerunfilecheck)             Checksum: AE50392B357599EA03E85C865503E4AA;2132.
+(rerunfilecheck)             Checksum: 358B398D2E22F8DEA73FAE00FA0A7A9F;2276.
  ) 
 Here is how much of TeX's memory you used:
- 43714 strings out of 476025
- 934314 string characters out of 5790017
+ 43720 strings out of 476025
+ 934383 string characters out of 5790017
  1870388 words of memory out of 5000000
- 62930 multiletter control sequences out of 15000+600000
+ 62933 multiletter control sequences out of 15000+600000
  552332 words of font info for 152 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1012b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2151,10 +2158,10 @@ al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
 texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/t
 exlive/2023/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb>
-Output written on 01-Glasgow-Core.pdf (90 pages, 11730406 bytes).
+Output written on 01-Glasgow-Core.pdf (91 pages, 11731465 bytes).
 PDF statistics:
- 889 PDF objects out of 1000 (max. 8388607)
- 695 compressed objects within 7 object streams
- 193 named destinations out of 1000 (max. 500000)
- 47971 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 905 PDF objects out of 1000 (max. 8388607)
+ 709 compressed objects within 8 object streams
+ 196 named destinations out of 1000 (max. 500000)
+ 47979 words of extra memory for PDF output out of 51595 (max. 10000000)
 
