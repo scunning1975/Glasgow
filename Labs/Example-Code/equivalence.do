@@ -48,7 +48,6 @@ preserve
 restore
 
 
-
 * Now calculate the same thing using population weights as below
 
 * Example 1: OLS regression with interactions and population weights

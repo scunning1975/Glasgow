@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.14)  1 JUN 2025 21:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.14)  3 JUN 2025 09:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1543,7 +1543,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/l/n' aliased to
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/n' will be
 (Font)              scaled to size 10.95pt on input line 33.
 
-No file 02-Glasgow-Violations.aux.
+(./02-Glasgow-Violations.aux)
 \openout1 = `02-Glasgow-Violations.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1564,6 +1564,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1621,6 +1622,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring ON on input line 33.
+
+(./02-Glasgow-Violations.out) (./02-Glasgow-Violations.out)
 \@outlinefile=\write5
 \openout5 = `02-Glasgow-Violations.out'.
 
@@ -1690,7 +1693,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-No file 02-Glasgow-Violations.nav.
+(./02-Glasgow-Violations.nav)
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/l/n' aliased to
 (Font)              `OT1/Roboto-LF/light/n' on input line 33.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/n' will be
@@ -1703,13 +1706,13 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/b/n' aliased to
 (Font)              `OT1/Roboto-LF/bold/n' on input line 37.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
 (Font)              scaled to size 24.88pt on input line 37.
-<./lecture_includes/banner_cropped.png, id=49, 1541.76pt x 743.77875pt>
+<./lecture_includes/banner_cropped.png, id=81, 1541.76pt x 743.77875pt>
 File: ./lecture_includes/banner_cropped.png Graphic file (type png)
 <use ./lecture_includes/banner_cropped.png>
 Package pdftex.def Info: ./lecture_includes/banner_cropped.png  used on input l
 ine 40.
 (pdftex.def)             Requested size: 300.77377pt x 145.0987pt.
-No file 02-Glasgow-Violations.toc.
+ (./02-Glasgow-Violations.toc)
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/l/n' aliased to
 (Font)              `OT1/Roboto-LF/light/n' on input line 47.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/n' will be
@@ -1718,7 +1721,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/l/n' aliased to
 (Font)              `OT1/Roboto-LF/light/n' on input line 47.
 LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/n' will be
 (Font)              scaled to size 4.0pt on input line 47.
-[1
+ [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/roboto/rbto_schjax.enc} <./lecture_i
@@ -1769,7 +1772,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/n' will be
 ] [12
 
 ]
-<./lecture_includes/medicaid_qje.png, id=136, 949.5475pt x 883.80188pt>
+<./lecture_includes/medicaid_qje.png, id=180, 949.5475pt x 883.80188pt>
 File: ./lecture_includes/medicaid_qje.png Graphic file (type png)
 <use ./lecture_includes/medicaid_qje.png>
 Package pdftex.def Info: ./lecture_includes/medicaid_qje.png  used on input lin
@@ -1787,7 +1790,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
 ] [15
 
 ]
-<./lecture_includes/Miller_Medicaid1.png, id=158, 548.0475pt x 420.57124pt>
+<./lecture_includes/Miller_Medicaid1.png, id=203, 548.0475pt x 420.57124pt>
 File: ./lecture_includes/Miller_Medicaid1.png Graphic file (type png)
 <use ./lecture_includes/Miller_Medicaid1.png>
 Package pdftex.def Info: ./lecture_includes/Miller_Medicaid1.png  used on input
@@ -1796,7 +1799,7 @@ Package pdftex.def Info: ./lecture_includes/Miller_Medicaid1.png  used on input
  [16
 
  <./lecture_includes/Miller_Medicaid1.png>]
-<./lecture_includes/Miller_Medicaid2.png, id=166, 499.8675pt x 429.605pt>
+<./lecture_includes/Miller_Medicaid2.png, id=211, 499.8675pt x 429.605pt>
 File: ./lecture_includes/Miller_Medicaid2.png Graphic file (type png)
 <use ./lecture_includes/Miller_Medicaid2.png>
 Package pdftex.def Info: ./lecture_includes/Miller_Medicaid2.png  used on input
@@ -1805,7 +1808,7 @@ Package pdftex.def Info: ./lecture_includes/Miller_Medicaid2.png  used on input
  [17
 
  <./lecture_includes/Miller_Medicaid2.png>]
-<./lecture_includes/Miller_Medicaid3.png, id=175, 548.0475pt x 424.58624pt>
+<./lecture_includes/Miller_Medicaid3.png, id=219, 548.0475pt x 424.58624pt>
 File: ./lecture_includes/Miller_Medicaid3.png Graphic file (type png)
 <use ./lecture_includes/Miller_Medicaid3.png>
 Package pdftex.def Info: ./lecture_includes/Miller_Medicaid3.png  used on input
@@ -1817,7 +1820,7 @@ Package pdftex.def Info: ./lecture_includes/Miller_Medicaid3.png  used on input
 [19
 
 ]
-<./lecture_includes/placebo_medicaid.png, id=190, 853.68938pt x 342.27875pt>
+<./lecture_includes/placebo_medicaid.png, id=234, 853.68938pt x 342.27875pt>
 File: ./lecture_includes/placebo_medicaid.png Graphic file (type png)
 <use ./lecture_includes/placebo_medicaid.png>
 Package pdftex.def Info: ./lecture_includes/placebo_medicaid.png  used on input
@@ -1833,7 +1836,7 @@ Overfull \hbox (28.62434pt too wide) in paragraph at lines 239--239
  <./lecture_includes/placebo_medicaid.png>] [21
 
 ]
-<./lecture_includes/Miller_Medicaid4.png, id=204, 1173.38374pt x 654.445pt>
+<./lecture_includes/Miller_Medicaid4.png, id=248, 1173.38374pt x 654.445pt>
 File: ./lecture_includes/Miller_Medicaid4.png Graphic file (type png)
 <use ./lecture_includes/Miller_Medicaid4.png>
 Package pdftex.def Info: ./lecture_includes/Miller_Medicaid4.png  used on input
@@ -1858,7 +1861,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  [25
 
 ]
-<./lecture_includes/es_flawed.png, id=232, 1128.215pt x 820.06375pt>
+<./lecture_includes/es_flawed.png, id=276, 1128.215pt x 820.06375pt>
 File: ./lecture_includes/es_flawed.png Graphic file (type png)
 <use ./lecture_includes/es_flawed.png>
 Package pdftex.def Info: ./lecture_includes/es_flawed.png  used on input line 3
@@ -1867,7 +1870,7 @@ Package pdftex.def Info: ./lecture_includes/es_flawed.png  used on input line 3
  [26
 
  <./lecture_includes/es_flawed.png>]
-<./lecture_includes/es_correct.png, id=239, 1128.215pt x 820.06375pt>
+<./lecture_includes/es_correct.png, id=283, 1128.215pt x 820.06375pt>
 File: ./lecture_includes/es_correct.png Graphic file (type png)
 <use ./lecture_includes/es_correct.png>
 Package pdftex.def Info: ./lecture_includes/es_correct.png  used on input line 
@@ -1876,7 +1879,7 @@ Package pdftex.def Info: ./lecture_includes/es_correct.png  used on input line
  [27
 
  <./lecture_includes/es_correct.png>]
-<./lecture_includes/misleading_eventstudy_code.jpg, id=246, 1726.45pt x 1469.49
+<./lecture_includes/misleading_eventstudy_code.jpg, id=290, 1726.45pt x 1469.49
 pt>
 File: ./lecture_includes/misleading_eventstudy_code.jpg Graphic file (type jpg)
 
@@ -1893,7 +1896,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/light/it' will be
  <./lecture_includes/misleading_eventstudy_code.jpg>] [29
 
 ]
-<./lecture_includes/selection_y0.png, id=260, 2135.98pt x 1281.78876pt>
+<./lecture_includes/selection_y0.png, id=304, 2135.98pt x 1281.78876pt>
 File: ./lecture_includes/selection_y0.png Graphic file (type png)
 <use ./lecture_includes/selection_y0.png>
 Package pdftex.def Info: ./lecture_includes/selection_y0.png  used on input lin
@@ -1942,7 +1945,7 @@ LaTeX Font Info:    Font shape `OT1/Roboto-LF/bold/n' will be
 ] [40
 
 ]
-<./lecture_includes/gruber_ddd_3.pdf, id=334, 205.9056pt x 224.68094pt>
+<./lecture_includes/gruber_ddd_3.pdf, id=374, 205.9056pt x 224.68094pt>
 File: ./lecture_includes/gruber_ddd_3.pdf Graphic file (type pdf)
 <use ./lecture_includes/gruber_ddd_3.pdf>
 Package pdftex.def Info: ./lecture_includes/gruber_ddd_3.pdf  used on input lin
@@ -1980,7 +1983,7 @@ Package microtype Info: Loading generic protrusion settings for font family
  [45
 
 {/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}]
-<./lecture_includes/ddd_simulation.png, id=406, 1266.23062pt x 919.435pt>
+<./lecture_includes/ddd_simulation.png, id=446, 1266.23062pt x 919.435pt>
 File: ./lecture_includes/ddd_simulation.png Graphic file (type png)
 <use ./lecture_includes/ddd_simulation.png>
 Package pdftex.def Info: ./lecture_includes/ddd_simulation.png  used on input l
@@ -1989,7 +1992,7 @@ ine 630.
  [46
 
  <./lecture_includes/ddd_simulation.png>]
-<./lecture_includes/olden_moen_2022_ddd.png, id=414, 682.04813pt x 1040.88875pt
+<./lecture_includes/olden_moen_2022_ddd.png, id=454, 682.04813pt x 1040.88875pt
 >
 File: ./lecture_includes/olden_moen_2022_ddd.png Graphic file (type png)
 <use ./lecture_includes/olden_moen_2022_ddd.png>
@@ -2005,13 +2008,12 @@ Overfull \vbox (30.41805pt too high) detected at line 638
  <./lecture_includes/olden_moen_2022_ddd.png>] [48
 
 ]
-No file 02-Glasgow-Violations.toc.
-[49
+(./02-Glasgow-Violations.toc) [49
 
 ] [50
 
 ]
-<./lecture_includes/hong_napster.png, id=443, 676.5275pt x 283.55937pt>
+<./lecture_includes/hong_napster.png, id=488, 676.5275pt x 283.55937pt>
 File: ./lecture_includes/hong_napster.png Graphic file (type png)
 <use ./lecture_includes/hong_napster.png>
 Package pdftex.def Info: ./lecture_includes/hong_napster.png  used on input lin
@@ -2025,7 +2027,7 @@ Overfull \hbox (4.06755pt too wide) in paragraph at lines 676--676
 [51
 
  <./lecture_includes/hong_napster.png>]
-<./lecture_includes/Hong_1.pdf, id=451, 301.15051pt x 200.70114pt>
+<./lecture_includes/Hong_1.pdf, id=496, 301.15051pt x 200.70114pt>
 File: ./lecture_includes/Hong_1.pdf Graphic file (type pdf)
 <use ./lecture_includes/Hong_1.pdf>
 Package pdftex.def Info: ./lecture_includes/Hong_1.pdf  used on input line 684.
@@ -2036,7 +2038,7 @@ Package pdftex.def Info: ./lecture_includes/Hong_1.pdf  used on input line 684.
  <./lecture_includes/Hong_1.pdf>] [53
 
 ]
-<./lecture_includes/hong_table.png, id=547, 670.00313pt x 225.84375pt>
+<./lecture_includes/hong_table.png, id=591, 670.00313pt x 225.84375pt>
 File: ./lecture_includes/hong_table.png Graphic file (type png)
 <use ./lecture_includes/hong_table.png>
 Package pdftex.def Info: ./lecture_includes/hong_table.png  used on input line 
@@ -2077,7 +2079,7 @@ Overfull \hbox (9.76501pt too wide) detected at line 848
 ] [67
 
 ]
-<./lecture_includes/step6_imbalance.png, id=639, 792.9625pt x 527.47063pt>
+<./lecture_includes/step6_imbalance.png, id=681, 792.9625pt x 527.47063pt>
 File: ./lecture_includes/step6_imbalance.png Graphic file (type png)
 <use ./lecture_includes/step6_imbalance.png>
 Package pdftex.def Info: ./lecture_includes/step6_imbalance.png  used on input 
@@ -2111,7 +2113,7 @@ line 924.
 ] [80
 
 ]
-<./lecture_includes/common_support_abadie.jpg, id=722, 1555.8125pt x 1401.235pt
+<./lecture_includes/common_support_abadie.jpg, id=763, 1555.8125pt x 1401.235pt
 >
 File: ./lecture_includes/common_support_abadie.jpg Graphic file (type jpg)
 <use ./lecture_includes/common_support_abadie.jpg>
@@ -2176,7 +2178,7 @@ Overfull \vbox (2.4227pt too high) detected at line 1472
 ] [106
 
 ]
-<./lecture_includes/covariates.jpg, id=885, 2635.8475pt x 1756.5625pt>
+<./lecture_includes/covariates.jpg, id=925, 2635.8475pt x 1756.5625pt>
 File: ./lecture_includes/covariates.jpg Graphic file (type jpg)
 <use ./lecture_includes/covariates.jpg>
 Package pdftex.def Info: ./lecture_includes/covariates.jpg  used on input line 
@@ -2194,31 +2196,19 @@ Package pdftex.def Info: ./lecture_includes/covariates.jpg  used on input line
 \tf@snm=\write8
 \openout8 = `02-Glasgow-Violations.snm'.
 
- [108]
+
 (./02-Glasgow-Violations.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
-
-
-Package rerunfilecheck Warning: File `02-Glasgow-Violations.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `02-Glasgow-Violations.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  B7182F58C9E253764FD6F82486677C4D;1294.
+Package rerunfilecheck Info: File `02-Glasgow-Violations.out' has not changed.
+(rerunfilecheck)             Checksum: B7182F58C9E253764FD6F82486677C4D;1294.
  ) 
 Here is how much of TeX's memory you used:
- 43700 strings out of 476025
- 937408 string characters out of 5790017
+ 43994 strings out of 476025
+ 941104 string characters out of 5790017
  1874388 words of memory out of 5000000
- 62869 multiletter control sequences out of 15000+600000
+ 63151 multiletter control sequences out of 15000+600000
  552328 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1018b,711s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2246,10 +2236,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2023/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 02-Glasgow-Violations.pdf (108 pages, 6124199 bytes).
+Output written on 02-Glasgow-Violations.pdf (107 pages, 6125730 bytes).
 PDF statistics:
- 1029 PDF objects out of 1200 (max. 8388607)
- 786 compressed objects within 8 object streams
+ 1068 PDF objects out of 1200 (max. 8388607)
+ 825 compressed objects within 9 object streams
  223 named destinations out of 1000 (max. 500000)
- 47903 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 47967 words of extra memory for PDF output out of 51595 (max. 10000000)
 

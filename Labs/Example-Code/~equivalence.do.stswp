@@ -36,10 +36,10 @@ sum did
 * Example 1: OLS regression with interactions
 reg l_homicide post##treat, cluster(sid)
 
-* Example 2: twoway fixed effects (state and year fixed effects)
+* Example 2: Twoway fixed effects (state and year fixed effects)
 xtreg l_homicide c.treat#c.post i.year, fe vce(cluster sid)
 
-* Example 3: Regress "long difference" o
+* Example 3: Regress "long difference" onto treatment dummy
 preserve
     keep sid year l_homicide treat
     reshape wide l_homicide, i(sid) j(year)
@@ -48,12 +48,11 @@ preserve
 restore
 
 
-
 * Now calculate the same thing using population weights as below
 
 * Example 1: OLS regression with interactions and population weights
 reg l_homicide post##treat [aweight=popwt], cluster(state) 
 
-* Example 2: twoway fixed effects (state and year fixed effects)
+* Example 2: Twoway fixed effects (state and year fixed effects)
 
-* Example 3: 
+* Example 3: Regress "long difference" onto treatment dummy
