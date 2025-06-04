@@ -41,11 +41,16 @@ xtreg l_homicide c.treat#c.post i.year, fe vce(cluster sid)
 
 * Example 3: Regress "long difference" onto treatment dummy
 preserve
-    keep sid year l_homicide treat
-    reshape wide l_homicide, i(sid) j(year)
+    keep sid year l_homicide prison treat
+    reshape wide l_homicide prison, i(sid) j(year)
     gen diff = l_homicide2006 - l_homicide2005
     reg diff treat, vce(cluster sid)
 restore
+
+	* Visualize the imbalance
+twoway (histogram age if treat==1,  color(green)) ///
+       (histogram age if treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
 
 
 * Now calculate the same thing using population weights as below

@@ -88,7 +88,6 @@
 	regress earnings 	i.treat##c.age 
 						i.treat##c.age_sq
 						i.treat##c.gpa 
-						i.treat##c.gpa_sq					
 						i.treat##c.age##c.gpa;
 	#delimit cr					
 	
@@ -101,7 +100,6 @@
 	local age_treat_coef 	= _b[1.treat#c.age] // 1
 	local agesq_treat_coef 	= _b[1.treat#c.age_sq] // 2
 	local gpa_treat_coef 	= _b[1.treat#c.gpa] // 3
-	local gpasq_treat_coef 	= _b[1.treat#c.gpa_sq] // 4
 	local age_gpa_coef 		= _b[1.treat#c.age#c.gpa] // 5
 	
 
