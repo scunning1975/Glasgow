@@ -59,7 +59,7 @@ program define dgp
   * Generate Potential Outcomes with Baseline and Year Difference
   gen          e = rnormal(0, 1500)
   qui gen     y0 = unit_fe        + 100 * age + 1000 * gpa + e if year == 1990
-  qui replace y0 = unit_fe 	 + 200 * age + 2000 * gpa + e if year == 1991
+  qui replace y0 = unit_fe  	  + 100 * age + 1000 * gpa + e if year == 1991
   * ^ NOTE: 
   * The change in coefficients on age and gpa generate trends in outcomes.
   * If two units have the same age and same gpa, then they will have the same change in y0.
