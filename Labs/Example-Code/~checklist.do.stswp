@@ -287,22 +287,87 @@ count if propensity_score>=`r(min)' & ever_treat==0
 
 restore
 
+
+* Attempt 3: Claude
+
+/*
+Most Important/Strong Associations:
+Police - Wilson would emphasize this heavily given his "broken windows" theory and belief in deterrence effects. The literature generally shows negative correlation with crime, though causality is debated.
+Prisoner/Lagprisoner - Both would cite this as crucial. The incapacitation effect was well-established by 2000-2010, with estimates that each additional prisoner prevents 2-5 crimes annually. Donohue's work on abortion and crime also emphasized incarceration's role.
+Blackm_15_24 - Unfortunately, both would acknowledge this as one of the strongest demographic predictors. Young males aged 15-24 have the highest offending rates, and this was a key variable in Donohue's abortion-crime research.
+Unemployrt - Mixed but important. Wilson might be more skeptical given weak empirical relationships in some studies, but Donohue would likely include it given economic theories of crime.
+
+*/
+
 drop *_q*
 
+preserve
+keep if year==2004
+
+global claude "unemployrt police blackm_15_24 whitem_15_24 prisoner"
+
+logit ever_treat $claude
+
+predict propensity_score
+label variable propensity_score "Propensity score"
+	
+twoway (kdensity propensity_score if ever_treat==1,  color(red)) ///
+       (kdensity propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+twoway (histogram propensity_score if ever_treat==1,  color(red)) ///
+       (histogram propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+bysort ever_treat: su propensity_score, detail
+
+su propensity_score if ever_treat==1
+count if propensity_score>=`r(min)' & ever_treat==0
+
+restore
+
 * POLICE
-xtile police_q = police, nq(4) 
+xtile police_q = police, nq(2) 
 ta police_q, gen(police_q)
 
+* PRISONER
+xtile prisoner_q = prisoner, nq(2) 
+ta prisoner_q, gen(prisoner_q)
+
+* YOUTH
+xtile blackm_15_24_q = blackm_15_24, nq(2) 
+ta blackm_15_24_q, gen(blackm_15_24_q)
+
+xtile whitem_15_24_q = whitem_15_24, nq(2) 
+ta whitem_15_24_q, gen(whitem_15_24_q)
+
 * UNEMPLOYMENT
-xtile unemployrt_q = unemployrt, nq(4) 
+xtile unemployrt_q  = unemployrt , nq(2) 
 ta unemployrt_q, gen(unemployrt_q)
 
-* INCOME
-xtile income_q = income, nq(4) 
-ta income_q, gen(income_q)
-
-csdid l_homicide police_q1 police_q2 police_q3 unemployrt_q1 unemployrt_q2 unemployrt_q3 income_q1 income_q2 income_q3, gvar(treat_date) ivar(sid) time(year) long2 method(drimp) wboot reps(1000) notyet rseed(1)
 
 
+csdid l_homicide police_q2 prisoner_q2 blackm_15_24_q2 whitem_15_24_q2 unemployrt_q2, gvar(treat_date) ivar(sid) time(year) long2 method(drimp) wboot reps(1000) notyet rseed(1)
+
+csdid_estat simple
+csdid_estat group
+csdid_estat event
+
+csdid_plot, ///
+    title("Effect of Castle Doctrine Law on Ln(Homicides)") ///
+    subtitle("Controls and Long Differences") ///
+note("Note: Uses the not-yet-treated as controls, " ///
+     "with three covariates -- above median police, above median black male youth, above median white male youth, above median unemploym. Circles are ATT(g,t) estimates by relative event time. All groups and" ///
+	 "bands are 95% uniform confidence intervals. Mean birth rate was approximately 0.062 " ///
+	 "in 2000.") ///
+    xtitle("Relative Years Before and After Personals Opened") ///
+    ytitle("Estimated average treatment effects") ///
+    style(rspike) ///
+    xlabel(, labsize(small)) ///
+    ylabel(, labsize(small) angle(0)) ///
+    xscale(titlegap(*1.5)) ///
+    yscale(titlegap(*1.5))
+
+graph export "../Figures/es_births_shortnone.png", as(png) name("Graph")	replace
 
 
