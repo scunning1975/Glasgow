@@ -163,3 +163,144 @@ graph combine plot_0 plot_2005 plot_2006 plot_2007 plot_2008 plot_2009, ///
 graph export "./ln_homicides_plots.png", as(png) name("Graph") replace width(2000)
 
 restore
+
+* Step 7: Estimator. We are going to use CS.  I am estimating the ATT for the average US state which means I will *not* be weighting by population (though others can do that -- it just will be a different parameter with a different interpretation with a different parallel trend assumption).  I'm going to make two things: a simple ATT and an event study and my covariates will be:
+
+xtset sid year
+
+global controls "police unemployrt income prisoner lagprisoner poverty exp_pubwelfare midwest south west"
+
+csdid l_homicide $controls, gvar(treat_date) ivar(sid) time(year) long2 method(drimp) wboot reps(1000) notyet rseed(1)
+
+
+* we have some thing weird going on with these covariates because when we include all these covariates, like 90% of the ATTs are not estimated. And we went one by one, and one by one, it's fine, but when we did all the regionals and one continuous covariate, then we started losing.  So we are going to plot propensity scores for 2004.
+
+
+* Attempt #1 -- fail.
+preserve
+keep if year==2004
+
+logit ever_treat $controls
+predict propensity_score
+label variable propensity_score "Propensity score"
+	
+twoway (kdensity propensity_score if ever_treat==1,  color(red)) ///
+       (kdensity propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+twoway (histogram propensity_score if ever_treat==1,  color(red)) ///
+       (histogram propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+bysort ever_treat: su propensity_score, detail
+
+su propensity_score if ever_treat==1
+count if propensity_score>=`r(min)' & ever_treat==0
+	   
+
+* Unfortunately, even though I think I need those covariates as controls, CS cannot accomodate them because if the lack of common support in my propensity score, and if you recall, one of the four assumptions in CS was "common support" and I currently do not have it. So I am going to cheat. I am going to "coarsen" the covariates and see if that helps.
+
+restore
+
+* Attempt 2: all the covariates that are continuous I will discretize into quartiles (25th, 50th, 75th percentile)
+
+* POLICE
+xtile police_q = police, nq(4) 
+ta police_q, gen(police_q)
+
+* UNEMPLOYMENT
+xtile unemployrt_q = unemployrt, nq(4) 
+ta unemployrt_q, gen(unemployrt_q)
+
+* INCOME
+xtile income_q = income, nq(4) 
+ta income_q, gen(income_q)
+
+* PRISONER
+xtile prisoner_q = prisoner, nq(4)
+ta prisoner_q, gen(prisoner_q)
+
+* LAGPRISONER
+xtile lagprisoner_q = lagprisoner, nq(4) 
+ta lagprisoner_q, gen(lagprisoner_q)
+
+* POVERTY
+xtile poverty_q = poverty, nq(4) 
+ta poverty_q, gen(poverty_q)
+
+* EXP_PUBWELFARE
+xtile exp_pubwelfare_q = exp_pubwelfare, nq(4) 
+ta exp_pubwelfare_q, gen(exp_pubwelfare_q)
+
+global coarsened_controls ///
+police_q1 police_q2 police_q3 unemployrt_q1 unemployrt_q2 unemployrt_q3 income_q1 income_q2 income_q3 prisoner_q1 prisoner_q2 prisoner_q3 lagprisoner_q1 lagprisoner_q2 lagprisoner_q3 poverty_q1 poverty_q2 poverty_q3 exp_pubwelfare_q1 exp_pubwelfare_q2 exp_pubwelfare_q3 	   
+	   
+	   
+* Now we see if CS "works", but "works" does not mean I like the results. For us, "works" means NO Xs. But first let's see how we did on the propensity score -- remember our propensity score before had so many continuous variables (we think this was it anyway) that we only had 4 control group observations with more propensity score values than the minimum in the treatment group. Let's see what it is now.
+
+preserve
+keep if year==2004
+
+logit ever_treat $coarsened_controls
+predict propensity_score
+label variable propensity_score "Propensity score"
+	
+twoway (kdensity propensity_score if ever_treat==1,  color(red)) ///
+       (kdensity propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+twoway (histogram propensity_score if ever_treat==1,  color(red)) ///
+       (histogram propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+bysort ever_treat: su propensity_score, detail
+
+su propensity_score if ever_treat==1
+count if propensity_score>=`r(min)' & ever_treat==0
+	   
+restore
+
+* Attempt 3: parsimoniously chosen yet TONS of researcher degrees of freedom and discretion so we are as a group a teeny bit anxious about this.  and not int toal agreement. 
+
+
+preserve
+keep if year==2004
+global democracy_controls "unemployrt income police"
+
+logit ever_treat $democracy_controls
+
+predict propensity_score
+label variable propensity_score "Propensity score"
+	
+twoway (kdensity propensity_score if ever_treat==1,  color(red)) ///
+       (kdensity propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+twoway (histogram propensity_score if ever_treat==1,  color(red)) ///
+       (histogram propensity_score if ever_treat==0,  ///
+	   fcolor(none) lcolor(black)), legend(order(1 "Treated" 2 "Not treated" ))
+	   
+bysort ever_treat: su propensity_score, detail
+
+su propensity_score if ever_treat==1
+count if propensity_score>=`r(min)' & ever_treat==0
+
+restore
+
+drop *_q*
+
+* POLICE
+xtile police_q = police, nq(2) 
+ta police_q, gen(police_q)
+
+* UNEMPLOYMENT
+xtile unemployrt_q = unemployrt, nq(2) 
+ta unemployrt_q, gen(unemployrt_q)
+
+* 
+
+csdid l_homicide   police_q2 police_q3  unemployrt_q2 unemployrt_q3  income_q2 income_q3, gvar(treat_date) ivar(sid) time(year) long2 method(drimp) wboot reps(1000) notyet rseed(1)
+
+
+
+
