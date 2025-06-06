@@ -27,8 +27,12 @@ label variable treat_date "Timing Group Treatment Date (never-treated is zero)"
 
 ta treat_date if year==2000
 
-gen treat=0
+gen 	treat=0
 replace treat=1 if year>=effyear
+
+* Generate a variable indicating that they will "ever be treated"
+gen 	ever_treat = 0
+replace ever_treat = 1 if effyear~=.
 
 
 * Step 3. Plot the treatment rollout. 
@@ -41,8 +45,58 @@ police unemployrt income blackm_15_24 whitem_15_24 blackm_25_44 whitem_25_44 pri
 
 */
 
-* Step 5. Create a covariate imbalance table using that Imbens and Rubin (2015) rule, as well as Baker, Callaway, Cunningham, Goodman-Bacon and Sant'Anna JEL "Practitioner's Guide" which says if the normalized difference in means between the treatment and control group is greater than 0.25 in absolute value, there is "problematic imbalance in that covariate" and you may need to control for it. Our treatments start in 2005, then is each year after for different groups, so I am going to create an imbalance table for 2004 covr
+* Step 5. Create a covariate imbalance table using that Imbens and Rubin (2015) rule, as well as Baker, Callaway, Cunningham, Goodman-Bacon and Sant'Anna JEL "Practitioner's Guide" which says if the normalized difference in means between the treatment and control group is greater than 0.25 in absolute value, there is "problematic imbalance in that covariate" and you may need to control for it. Our treatments start in 2005, then is each year after for different groups, so I am going to create an imbalance table for 2004 covariates.
 
+/*********************************************************************/
+/*    Covariate Balance Table - Baseline Year 2004 (Clean Version)  */
+/*********************************************************************/
 
+*---------------------------------------------------------------------
+* Define covariates
+*---------------------------------------------------------------------
+local covs police unemployrt income blackm_15_24 whitem_15_24 ///
+           blackm_25_44 whitem_25_44 prisoner lagprisoner poverty ///
+           exp_subsidy exp_pubwelfare northeast midwest south west
 
-
+*---------------------------------------------------------------------
+* Create the balance table
+*---------------------------------------------------------------------
+preserve
+    keep if year == 2004
+    
+    * Create empty results matrix
+    matrix results = J(16, 3, .)
+    matrix colnames results = "Control_Mean" "Treated_Mean" "Norm_Diff"
+    
+    local i = 1
+    foreach var of local covs {
+        * Get means by group
+        quietly sum `var' if ever_treat==0
+        local mean0 = r(mean)
+        quietly sum `var' if ever_treat==1  
+        local mean1 = r(mean)
+        
+        * Get standard deviations by group
+        quietly sum `var' if ever_treat==0
+        local sd0 = r(sd)
+        quietly sum `var' if ever_treat==1
+        local sd1 = r(sd)
+        
+        * Calculate normalized difference
+        local norm_diff = (`mean1' - `mean0') / sqrt((`sd0'^2 + `sd1'^2)/2)
+        
+        * Store in matrix
+        matrix results[`i',1] = `mean0'
+        matrix results[`i',2] = `mean1' 
+        matrix results[`i',3] = `norm_diff'
+        
+        local ++i
+    }
+    
+    * Add row names
+    matrix rownames results = `covs'
+    
+    * Display the table
+    matrix list results, format(%9.3f)
+    
+restore
