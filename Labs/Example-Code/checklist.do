@@ -101,3 +101,27 @@ preserve
     
 restore
 
+/* Covariates imbalanced for unweighted:
+
+police (0.279)
+unemployrt (0.484)
+income (-1.486)
+prisoner (0.940)
+lagprisoner (0.924)
+poverty (1.260)
+exp_pubwelfare (-0.253)
+northeast (-0.932)
+midwest (0.369)
+south (0.776)
+west (-0.474)
+
+So I will control for those
+
+*/
+
+global controls "police unemployrt income prisoner lagprisoner poverty exp_pubwelfare northeast midwest south west"
+
+
+
+
+
