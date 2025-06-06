@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Imputation DiD}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Imputation based robust estimator}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{2SDiD}{23}{0}{1}
+\beamer@sectionintoc {2}{Interesting Applications using staggered adoption}{41}{0}{2}
+\beamer@subsectionintoc {2}{1}{Facebook and Mental Health}{42}{0}{2}
+\beamer@subsectionintoc {2}{2}{ChatBot Rollout}{68}{0}{2}
+\beamer@sectionintoc {3}{Concluding remarks}{82}{0}{3}
