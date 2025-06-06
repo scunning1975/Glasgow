@@ -36,7 +36,7 @@ replace ever_treat = 1 if effyear~=.
 
 
 * Step 3. Plot the treatment rollout. 
-panelview l_homicide treat, prepost bytiming i(sid) t(year) type(treat) xtitle("Year") ytitle("US States") ylabel(none) title("Rollout of Castle Doctrine") legend(label(1 "Never Treated") label(2 "Treated (Pre)") label(3 "Treated(Post)"))
+panelview l_homicide treat, prepost bytiming i(state) t(year) type(treat) xtitle("Year") ytitle("US States") title("Rollout of Castle Doctrine Law") legend(label(1 "Never Treated") label(2 "Treated (Pre)") label(3 "Treated(Post)"))
 
 
 /* Step 4. Picking covariates and we will start with these:
@@ -119,9 +119,47 @@ So I will control for those
 
 */
 
-global controls "police unemployrt income prisoner lagprisoner poverty exp_pubwelfare northeast midwest south west"
+global controls "police unemployrt income prisoner lagprisoner poverty exp_pubwelfare midwest south west"
 
+* Step 6: Plot average l_homicide for treatment cohorts
 
+preserve
 
+collapse (mean) l_homicide, by(treat_date year)
+xtset treat_date year
 
+* Create separate variables for each treatment group  
+separate l_homicide, by(treat_date) gen(yr)
 
+* Create individual plots for each cohort
+foreach t in 0 2005 2006 2007 2008 2009 {
+    if (`t' == 0) {
+        local label "never treated"
+        local rline 0
+    }
+    else {
+        local label "`t' cohort" 
+        local rline `t'
+    }
+    local linecolor = cond(`t' == 0, "blue", "blue")
+    
+    scatter yr* year, recast(line) lc(gs12 ...) lp(solid ...) ///
+        legend(off) || line l_homicide year if treat_date == `t', ///
+        lc(`linecolor') lp(solid) lw(medthick) xtitle("") subtitle("`label'") ///
+        name(plot_`t', replace) ///
+        xline(`rline', lcolor(red) lpattern(dash)) ///
+        xlabel(2000(1)2010, labsize(small)) ///
+        xscale(range(2000 2010)) ///
+        ylabel(, angle(0) labsize(small))
+}
+
+* Combine all plots
+graph combine plot_0 plot_2005 plot_2006 plot_2007 plot_2008 plot_2009, ///
+    title("Average Log Homicides by Cohort") ///
+    subtitle("per 100,000") ///
+    ysize(8) xsize(10) ///
+    scale(0.9)
+    
+graph export "./ln_homicides_plots.png", as(png) name("Graph") replace width(2000)
+
+restore
