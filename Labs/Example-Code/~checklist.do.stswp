@@ -345,7 +345,8 @@ ta whitem_15_24_q, gen(whitem_15_24_q)
 xtile unemployrt_q  = unemployrt , nq(2) 
 ta unemployrt_q, gen(unemployrt_q)
 
-
+https://docs.google.com/spreadsheets/d/1dQ6Cx7FGLpA5IqK6Pkpaa1FtLko684oDYNq4AFuIYMw/edit?usp=sharing
+* Scott:
 
 csdid l_homicide police_q2 prisoner_q2 blackm_15_24_q2 whitem_15_24_q2 unemployrt_q2, gvar(treat_date) ivar(sid) time(year) long2 method(drimp) wboot reps(1000) notyet rseed(1)
 
@@ -356,11 +357,12 @@ csdid_estat event
 csdid_plot, ///
     title("Effect of Castle Doctrine Law on Ln(Homicides)") ///
     subtitle("Controls and Long Differences") ///
-note("Note: Uses the not-yet-treated as controls, " ///
-     "with three covariates -- above median police, above median black male youth, above median white male youth, above median unemploym. Circles are ATT(g,t) estimates by relative event time. All groups and" ///
-	 "bands are 95% uniform confidence intervals. Mean birth rate was approximately 0.062 " ///
-	 "in 2000.") ///
-    xtitle("Relative Years Before and After Personals Opened") ///
+note("Note: Uses the not-yet-treated as controls, with three covariates -- above median police, above  " ///
+     "median black male youth, above median white male youth, above median unemployment rates." ///
+	 "Circles are ATT(g,t) estimates by relative event time. All groups and bands are 95% uniform" ///
+	 " confidence intervals. Mean ln(homicide rate) was approximately 1.67 in 2004 for the ever-treated" ///
+	 "states in 2000.") ///
+    xtitle("Relative Years Before and After Law Change") ///
     ytitle("Estimated average treatment effects") ///
     style(rspike) ///
     xlabel(, labsize(small)) ///
@@ -368,6 +370,6 @@ note("Note: Uses the not-yet-treated as controls, " ///
     xscale(titlegap(*1.5)) ///
     yscale(titlegap(*1.5))
 
-graph export "../Figures/es_births_shortnone.png", as(png) name("Graph")	replace
+graph export "./cs_homicides.png", as(png) name("Graph")	replace
 
 
