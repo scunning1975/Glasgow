@@ -345,7 +345,10 @@ ta whitem_15_24_q, gen(whitem_15_24_q)
 xtile unemployrt_q  = unemployrt , nq(2) 
 ta unemployrt_q, gen(unemployrt_q)
 
-* URL: https://docs.google.com/spreadsheets/d/1dQ6Cx7FGLpA5IqK6Pkpaa1FtLko684oDYNq4AFuIYMw/edit?usp=sharing
+* URL for google sheet: https://docs.google.com/spreadsheets/d/1dQ6Cx7FGLpA5IqK6Pkpaa1FtLko684oDYNq4AFuIYMw/edit?usp=sharing
+
+* URL for google doc:
+* https://docs.google.com/document/d/1O43WJws4LiDcQqplpFx2ywFGfW3ZDQYkLLSLc_7ke1k/edit?usp=sharing
 
 * Scott:
 
