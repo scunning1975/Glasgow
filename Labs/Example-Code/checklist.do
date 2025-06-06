@@ -41,5 +41,10 @@ police unemployrt income blackm_15_24 whitem_15_24 blackm_25_44 whitem_25_44 pri
 
 */
 
+* Step 5. Create a covariate imbalance table using that Imbens and Rubin (2015) rule, as well as Baker, Callaway, Cunningham, Goodman-Bacon and Sant'Anna JEL "Practitioner's Guide" which says if the normalized difference in means between the treatment and control group is greater than 0.25 in absolute value, there is "problematic imbalance in that covariate" and you may need to control for it. Our treatments start in 2005, then is each year after for different groups, so I am going to create an imbalance table for 2004 covariates.
+
+
+
+
 
 
